@@ -1,29 +1,18 @@
-var tape = require('tape')
-var pleaseUpgrade = require('./')
+'use strict'
+
+const assert = require("assert");
+const pleaseUpgrade = require("./");
 
 Object.defineProperty(process, "version", { value: "v4.5.6" });
 
 var count = 0;
 
-// Mock process.exit and console.error
-var exitCode = null
 process.exit = function(code) {
-  exitCode = code
-}
+  count = count + 1;
+};
 
-var errorMessage = null
-consoleError = console.error
-console.error = function(msg) {
-  errorMessage = msg
-  consoleError(msg)
-}
-
-function test(name, cb) {
-  // Before each
-  exitCode = null
-  errorMessage = null
-  // Test
-  tape(name, cb)
+function countShouldBe(expected) {
+  assert.equal(count, expected);
 }
 
 // Should not call process.exit

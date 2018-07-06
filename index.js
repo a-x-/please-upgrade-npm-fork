@@ -1,10 +1,12 @@
+'use strict'
+
 var semver = require('semver')
 
-module.exports = function (pkg) {
+module.exports = function(pkg) {
   if (!pkg.engines || !pkg.engines.node) {
     console.error(
-      "provided package.json data does not " +
-      "include a required version of Node:"
+      'provided package.json data does not ' +
+        'include a required version of Node:'
     )
     console.error(JSON.stringify(pkg, null, 2))
   }
@@ -14,7 +16,7 @@ module.exports = function (pkg) {
       pkg.name,
       pkg.engines.node,
       process.version
-    );
-    process.exit(1);
+    )
+    process.exit(1)
   }
 }
