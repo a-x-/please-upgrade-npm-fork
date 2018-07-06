@@ -1,5 +1,5 @@
 'use strict'
-
+/* eslint no-process-exit: 0 */
 var semver = require('semver')
 
 module.exports = function(pkg) {
