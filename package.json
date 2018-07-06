@@ -35,12 +35,12 @@
     "prettier": "1.12.1",
     "tape": "^4.9.1"
   },
-  "dependencies": {
-    "semver-compare": "^1.0.0"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "npm test && npm run lint"
     }
+  },
+  "dependencies": {
+    "semver": "^5.4.1"
   }
 }
