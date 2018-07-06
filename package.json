@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typicode/please-upgrade-node.git"
+    "url": "git+https://github.com/Aladdin-ADD/please-upgrade-node-fork.git"
   },
   "keywords": [
     "node",
@@ -24,9 +24,9 @@
   "author": "typicode",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/typicode/please-upgrade-node/issues"
+    "url": "https://github.com/Aladdin-ADD/please-upgrade-node-fork/issues"
   },
-  "homepage": "https://github.com/typicode/please-upgrade-node#readme",
+  "homepage": "https://github.com/Aladdin-ADD/please-upgrade-node-fork#readme",
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-node": "^6.0.1",

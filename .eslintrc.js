@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:node/recommended'],
+  extends: ['eslint:recommended', 'plugin:node/recommended'],
   plugins: ['prettier', 'node'],
   rules: {
     'prettier/prettier': [
@@ -8,6 +8,7 @@ module.exports = {
         singleQuote: true,
         semi: false,
       },
-    ]
+    ],
+    'no-console': 0
   }
 }

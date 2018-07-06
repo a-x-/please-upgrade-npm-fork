@@ -3,9 +3,8 @@
 var semver = require('semver')
 
 module.exports = function pleaseUpgradeNode(pkg, opts) {
-  var opts = opts || {}
+  opts = opts || {}
   var requiredVersion = pkg.engines.node.replace('>=', '')
-  var currentVersion = process.version.replace('v', '')
   if (!semver.satisfies(process.version, pkg.engines.node)) {
     if (opts.message) {
       console.error(opts.message(requiredVersion))

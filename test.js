@@ -7,7 +7,7 @@ Object.defineProperty(process, 'version', { value: 'v4.5.6' })
 
 var count = 0
 
-process.exit = function(code) {
+process.exit = function() {
   count = count + 1
 }
 
