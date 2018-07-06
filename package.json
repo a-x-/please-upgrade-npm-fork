@@ -1,5 +1,5 @@
 {
-  "name": "please-upgrade-node",
+  "name": "please-upgrade-node-fork",
   "version": "3.1.1",
   "description": "Displays a beginner-friendly message telling your user to upgrade their version of Node",
   "main": "index.js",
