@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node test",
     "lint": "eslint .",
-    "fix": "npm run lint -- --fix",
+    "fix": "eslint . --fix",
     "prepublishOnly": "npm test && npm run lint && pkg-ok"
   },
   "repository": {
