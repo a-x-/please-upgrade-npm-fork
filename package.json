@@ -28,12 +28,12 @@
   },
   "homepage": "https://github.com/Aladdin-ADD/please-upgrade-node-fork#readme",
   "devDependencies": {
-    "eslint": "^5.0.1",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-prettier": "^2.6.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.0.0-rc.12",
     "pkg-ok": "^2.2.0",
-    "prettier": "^1.13.7",
+    "prettier": "^1.16.4",
     "tape": "^4.9.1"
   },
   "husky": {

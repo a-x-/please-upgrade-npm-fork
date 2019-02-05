@@ -12,7 +12,7 @@ process.exit = function() {
 }
 
 function countShouldBe(expected) {
-  assert.equal(count, expected)
+  assert.strictEqual(count, expected)
 }
 
 // Should not call process.exit
