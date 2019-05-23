@@ -1,32 +1,32 @@
-# Please upgrade Node [![](http://img.shields.io/npm/dm/please-upgrade-node.svg?style=flat)](https://www.npmjs.org/package/please-upgrade-node) [![Build Status](https://travis-ci.org/typicode/please-upgrade-node.svg?branch=master)](https://travis-ci.org/typicode/please-upgrade-node) [![npm](https://img.shields.io/npm/v/please-upgrade-node.svg)](https://www.npmjs.com/package/please-upgrade-node)
+# Please upgrade npm
 
-> supporting semver checking, forked from please-upgrade-node@3.1.1
+> supporting semver checking, forked from please-upgrade-node-fork@3.2.2
 
-> :information_desk_person: show a message to your users to upgrade Node instead of a stacktrace
+> :information_desk_person: show a message to your users to upgrade npm instead of a stacktrace
 
 
-It's common for new Node users to miss or not understand engines warning when installing a CLI. This package displays a beginner-friendly message if their Node version is below the one expected.
+It's common for new Node users to miss or not understand engines warning when installing a CLI. This package displays a beginner-friendly message if their npm version is below the one expected.
 
 ```sh
-$ node -v
-0.12
+$ npm -v
+5.1.1
 
 $ modern-cli
-modern-cli requires at least version 6 of Node, please upgrade
+modern-cli requires 6 version of npm, please upgrade
 ```
 
 ## Usage
 
 ```sh
-npm install please-upgrade-node-fork
+npm install please-upgrade-npm
 ```
 
-Add `please-upgrade-node-fork` at the top of your CLI
+Add `please-upgrade-npm` at the top of your CLI
 
 ```js
 #!/usr/bin/env node
 const pkg = require('./package.json')
-require('please-upgrade-node-fork')(pkg) // <- Must run BEFORE requiring any other modules
+require('please-upgrade-npm')(pkg) // <- Must run BEFORE requiring any other modules
 
 // ...
 ```
@@ -36,7 +36,7 @@ Set in your `package.json` the required Node version
 ```js
 {
   "engines": {
-    "node": ">=6"
+    "npm": ">=6"
   }
 }
 ```
@@ -47,24 +47,12 @@ Set in your `package.json` the required Node version
 You can set custom `exitCode` and `message` function if needed
 
 ```js
-pleaseUpgradeNode(pkg, {
+pleaseUpgradeNpm(pkg, {
   exitCode: 0, // Default: 1
   message: function(requiredVersion) {
-    return 'Oops this program require Node ' +  requiredVersion
+    return 'Oops this program require npm ' +  requiredVersion
   }
 })
 ```
 
 __Important__: to keep `message` function compatible with older versions of Node, avoid using ES6 features like `=>` or string interpolation.
-
-## See also
-
-* [pkg-ok](https://github.com/typicode/pkg-ok) - :ok_hand: Prevents publishing a module with bad paths
-* [husky](https://github.com/typicode/husky) - :dog: Git hooks made easy
-* [update-notifier](https://github.com/yeoman/update-notifier) - Update notifications for your CLI app
-
-Thanks to [zeit/serve](https://github.com/zeit/serve) for the error message inspiration.
-
-## License
-
-MIT - [Typicode :cactus:](https://github.com/typicode) - [Patreon](https://patreon.com/typicode)
