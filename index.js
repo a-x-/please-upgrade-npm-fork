@@ -1,19 +1,20 @@
 'use strict'
 /* eslint no-process-exit: 0 */
 var semver = require('semver')
+var npmVersion = require('child_process').execSync('npm --version', {encoding:'utf8'}).trim()
 
-module.exports = function pleaseUpgradeNode(pkg, opts) {
+module.exports = function pleaseUpgradeNpm(pkg, opts) {
   opts = opts || {}
-  var requiredVersion = pkg.engines.node
-  if (!semver.satisfies(process.version, pkg.engines.node)) {
+  var requiredVersion = pkg.engines.npm
+  if (!semver.satisfies(npmVersion, pkg.engines.npm)) {
     if (opts.message) {
       console.error(opts.message(requiredVersion))
     } else {
       console.error(
         pkg.name +
-          ' requires at least version ' +
+          ' requires ' +
           requiredVersion +
-          ' of Node, please upgrade'
+          'version of npm, please upgrade'
       )
     }
 
