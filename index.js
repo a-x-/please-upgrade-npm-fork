@@ -1,7 +1,9 @@
 'use strict'
 /* eslint no-process-exit: 0 */
 var semver = require('semver')
-var npmVersion = require('child_process').execSync('npm --version', {encoding:'utf8'}).trim()
+var npmVersion = require('child_process')
+  .execSync('npm --version', { encoding: 'utf8' })
+  .trim()
 
 module.exports = function pleaseUpgradeNpm(pkg, opts) {
   opts = opts || {}
