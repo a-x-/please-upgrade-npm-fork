@@ -1,17 +1,16 @@
 {
-  "name": "please-upgrade-node-fork",
+  "name": "please-upgrade-npm",
   "version": "3.2.2",
-  "description": "Displays a beginner-friendly message telling your user to upgrade their version of Node",
+  "description": "Displays a beginner-friendly message telling your user to upgrade their version of npm",
   "main": "index.js",
   "scripts": {
-    "test": "node test",
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "prepublishOnly": "npm test && npm run lint && pkg-ok"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aladdin-ADD/please-upgrade-node-fork.git"
+    "url": "git+https://github.com/a-x-/please-upgrade-npm.git"
   },
   "keywords": [
     "node",
@@ -21,12 +20,12 @@
     "verify",
     "upgrade"
   ],
-  "author": "typicode",
+  "author": "a-x-",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Aladdin-ADD/please-upgrade-node-fork/issues"
+    "url": "https://github.com/a-x-/please-upgrade-npm/issues"
   },
-  "homepage": "https://github.com/Aladdin-ADD/please-upgrade-node-fork#readme",
+  "homepage": "https://github.com/a-x-/please-upgrade-npm#readme",
   "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-plugin-node": "^8.0.1",
