@@ -1,6 +1,6 @@
 {
   "name": "please-upgrade-npm",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "Displays a beginner-friendly message telling your user to upgrade their version of npm",
   "main": "index.js",
   "scripts": {
