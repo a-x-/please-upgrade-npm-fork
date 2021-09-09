@@ -16,7 +16,7 @@ module.exports = function pleaseUpgradeNpm(pkg, opts) {
         pkg.name +
           ' requires ' +
           requiredVersion +
-          'version of npm, please upgrade'
+          ' version of npm, please upgrade'
       )
     }
 
